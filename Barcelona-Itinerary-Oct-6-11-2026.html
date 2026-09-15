@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A comfortable six-day Barcelona itinerary for two adults, 6–11 October 2026.">
+  <title>Barcelona Itinerary: 6–11 October 2026</title>
+  <style>
+    :root {
+      --ink: #263238;
+      --muted: #59666c;
+      --paper: #fffdf8;
+      --cream: #f7efe2;
+      --terracotta: #b94f36;
+      --terracotta-dark: #843522;
+      --gold: #dda83a;
+      --blue: #176b7a;
+      --blue-dark: #0c4754;
+      --sky: #dff2f2;
+      --line: #dccdbb;
+      --shadow: 0 12px 32px rgba(66, 47, 31, .12);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f3e9db 0, var(--paper) 32rem);
+      font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--blue-dark); text-decoration-thickness: .09em; text-underline-offset: .16em; }
+    a:hover { color: var(--terracotta-dark); }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3 { line-height: 1.18; text-wrap: balance; }
+    h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+    h2 { color: var(--terracotta-dark); font-size: clamp(1.65rem, 4vw, 2.35rem); margin: 0 0 1.1rem; }
+    h3 { color: var(--blue-dark); font-size: 1.18rem; margin: 1.75rem 0 .7rem; }
+    p, ul, ol { margin-top: .7rem; margin-bottom: .9rem; }
+    li + li { margin-top: .45rem; }
+    .container { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      left: 1rem;
+      top: 1rem;
+      padding: .7rem 1rem;
+      color: #fff;
+      background: var(--blue-dark);
+      border-radius: .5rem;
+      transform: translateY(-180%);
+    }
+    .skip-link:focus { transform: none; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        radial-gradient(circle at 87% 18%, rgba(221,168,58,.55) 0 5rem, transparent 5.1rem),
+        linear-gradient(135deg, var(--terracotta-dark), var(--terracotta) 47%, var(--blue-dark));
+      border-bottom: 6px solid var(--gold);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .14;
+      background-image: repeating-linear-gradient(45deg, transparent 0 22px, #fff 23px 24px);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; padding: clamp(3rem, 8vw, 6.5rem) 0 2.6rem; }
+    .eyebrow { margin: 0 0 .8rem; color: #ffe8ad; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 880px; margin: 0; font-size: clamp(2.35rem, 7vw, 5rem); letter-spacing: -.025em; }
+    .hero-lede { max-width: 720px; margin: 1rem 0 0; font-size: clamp(1.08rem, 2.5vw, 1.35rem); color: #fff8eb; }
+
+    .facts { position: relative; z-index: 2; margin-top: -1.2rem; }
+    .fact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .85rem; }
+    .fact-card {
+      padding: 1rem 1.1rem;
+      background: rgba(255,253,248,.98);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--gold);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .fact-card dt { color: var(--terracotta-dark); font-size: .76rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .fact-card dd { margin: .3rem 0 0; font-weight: 650; }
+
+    .notice {
+      margin: 1.2rem 0;
+      padding: 1rem 1.1rem 1rem 3.2rem;
+      position: relative;
+      border: 1px solid #d3b66b;
+      border-left: 6px solid var(--gold);
+      border-radius: 12px;
+      background: #fff7dc;
+    }
+    .notice::before { content: "!"; position: absolute; left: 1.1rem; top: .9rem; color: var(--terracotta-dark); font-size: 1.35rem; font-weight: 900; }
+    .notice p { margin: 0; }
+    .alternative {
+      margin: 1rem 0;
+      padding: .85rem 1rem;
+      border-left: 5px solid var(--blue);
+      border-radius: 0 10px 10px 0;
+      background: var(--sky);
+    }
+    .alternative.warning { border-left-color: var(--terracotta); background: #fff0ea; }
+    .alternative p { margin: 0; }
+
+    .site-nav {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      margin-top: 1.4rem;
+      background: rgba(255,253,248,.95);
+      border-block: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .nav-scroll { display: flex; gap: .35rem; overflow-x: auto; padding: .65rem 0; scrollbar-width: thin; }
+    .site-nav a { flex: 0 0 auto; padding: .45rem .75rem; color: var(--blue-dark); border-radius: 999px; font-size: .9rem; font-weight: 750; text-decoration: none; }
+    .site-nav a:hover, .site-nav a:focus-visible { color: #fff; background: var(--blue-dark); }
+
+    main { padding: 2.3rem 0 4rem; }
+    .section-card, .day-card {
+      margin: 0 0 1.5rem;
+      padding: clamp(1.15rem, 4vw, 2.1rem);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .day-card { position: relative; overflow: hidden; border-top: 7px solid var(--terracotta); }
+    .day-card::before {
+      content: attr(data-day);
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .35rem .8rem;
+      color: #fff;
+      background: var(--terracotta);
+      border-radius: 0 0 0 12px;
+      font-size: .75rem;
+      font-weight: 850;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .section-intro { color: var(--muted); font-size: 1.05rem; }
+    figure { margin: 1.15rem 0 1.5rem; }
+    figure img { width: 100%; max-height: 560px; object-fit: cover; border-radius: 14px 14px 0 0; background: #e5ded2; }
+    figcaption { padding: .65rem .85rem; color: var(--muted); background: var(--cream); border-radius: 0 0 14px 14px; font-size: .86rem; font-style: italic; }
+
+    .timeline { list-style: none; padding: 0; margin-left: .4rem; }
+    .timeline > li { position: relative; margin: 0; padding: 0 0 1.05rem 1.6rem; border-left: 2px solid #dec9ad; }
+    .timeline > li::before { content: ""; position: absolute; left: -.43rem; top: .42rem; width: .72rem; height: .72rem; border: 3px solid var(--paper); border-radius: 50%; background: var(--terracotta); box-shadow: 0 0 0 2px var(--terracotta); }
+    .timeline > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline ol, .timeline ul { margin-top: .5rem; }
+
+    .table-wrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; min-width: 690px; border-collapse: collapse; background: #fff; }
+    caption { padding: .7rem; text-align: left; font-weight: 700; }
+    th, td { padding: .75rem .85rem; border-bottom: 1px solid #e8ded1; text-align: left; vertical-align: top; }
+    th { color: #fff; background: var(--blue-dark); }
+    tbody tr:nth-child(even) { background: #faf5ec; }
+    tbody tr:last-child td { border-bottom: 0; }
+    .num { text-align: right; white-space: nowrap; }
+    .stars { color: var(--terracotta-dark); font-size: 1.05rem; letter-spacing: .08em; }
+
+    .link-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; padding: 0; list-style: none; }
+    .link-grid li { margin: 0; }
+    .link-grid a { display: block; height: 100%; padding: .8rem .9rem; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; font-weight: 700; }
+    .closing-note { margin-top: 2rem; padding-top: 1.2rem; color: var(--muted); border-top: 2px solid var(--line); }
+    footer { padding: 1.25rem 0 2.5rem; color: #fff; background: var(--blue-dark); text-align: center; }
+    footer p { margin: 0; }
+
+    @media (max-width: 760px) {
+      .fact-grid { grid-template-columns: 1fr; }
+      .facts { margin-top: -.7rem; }
+      .section-card, .day-card { border-radius: 13px; }
+      .day-card::before { position: static; display: inline-block; margin: -.2rem 0 .8rem; border-radius: 999px; }
+      .link-grid { grid-template-columns: 1fr; }
+      .timeline { margin-left: .15rem; }
+      th, td { padding: .65rem; }
+    }
+
+    @media print {
+      @page { margin: 1.4cm; }
+      * { box-shadow: none !important; }
+      html { scroll-padding-top: 0; }
+      body { color: #000; background: #fff; font-size: 10.5pt; }
+      .skip-link, .site-nav { display: none; }
+      .hero { color: #000; background: #fff; border-bottom: 3px solid #000; }
+      .hero::after { display: none; }
+      .hero-inner { padding: 0 0 1rem; }
+      .eyebrow, .hero-lede { color: #000; }
+      .facts { margin-top: .5rem; }
+      .fact-grid { grid-template-columns: repeat(3, 1fr); }
+      .fact-card, .section-card, .day-card { break-inside: avoid; background: #fff; border-color: #777; }
+      .section-card, .day-card { margin-bottom: .8rem; padding: 1rem; }
+      .day-card { break-inside: auto; }
+      h2, h3, figure, .alternative, .notice, tr { break-inside: avoid; }
+      h2, h3 { break-after: avoid; color: #000; }
+      figure img { max-height: 360px; }
+      a { color: #000; text-decoration: underline; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; overflow-wrap: anywhere; }
+      figcaption a::after, .link-grid a::after { content: none; }
+      .table-wrap { overflow: visible; border-color: #777; }
+      table { min-width: 0; font-size: 8.5pt; }
+      th { color: #000; background: #ddd; }
+      footer { color: #000; background: #fff; border-top: 1px solid #000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to itinerary</a>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Six days · Two travelers · Barcelona</p>
+      <h1>Barcelona Itinerary:<br>6–11 October 2026</h1>
+      <p class="hero-lede">First-time highlights at a comfortable pace, with a midday rest on the fuller days.</p>
+    </div>
+  </header>
+
+  <section class="facts container" aria-label="Trip facts">
+    <dl class="fact-grid">
+      <div class="fact-card"><dt>Travelers</dt><dd>Two adults</dd></div>
+      <div class="fact-card"><dt>Dates</dt><dd>Tuesday 6 October–Sunday 11 October 2026 (5 nights / 6 days)</dd></div>
+      <div class="fact-card"><dt>Arrival</dt><dd>easyJet U2 2001 at Barcelona–El Prat (BCN), Tuesday 6 October at 16:05 local time (CEST / UTC+2)</dd></div>
+      <div class="fact-card"><dt>Return flight</dt><dd>Cathay Pacific CX318, Barcelona (BCN) to Hong Kong (HKG), expected departure Sunday 11 October at approximately 13:00 CEST; confirmed arrival Monday 12 October at 07:00 HKT (UTC+8)</dd></div>
+      <div class="fact-card"><dt>Base</dt><dd>Mihlton Barcelona Boutique B&amp;B, Carrer del Rosselló 231, Principal 2ª, Eixample</dd></div>
+      <div class="fact-card"><dt>Style</dt><dd>First-time highlights at a comfortable pace, with a midday rest on the fuller days</dd></div>
+    </dl>
+    <aside class="notice" aria-label="Flight-time note">
+      <p><strong>Flight-time note:</strong> The 07:00 Hong Kong arrival is confirmed from your booking. CX318 normally departs Barcelona at approximately 13:00 the previous day, but verify the exact departure time and terminal in Cathay Pacific Manage Booking before travel.</p>
+    </aside>
+  </section>
+
+  <nav class="site-nav" aria-label="Itinerary navigation">
+    <div class="container nav-scroll">
+      <a href="#overview">Overview</a>
+      <a href="#tuesday">Tue 6</a>
+      <a href="#wednesday">Wed 7</a>
+      <a href="#thursday">Thu 8</a>
+      <a href="#friday">Fri 9</a>
+      <a href="#saturday">Sat 10</a>
+      <a href="#sunday">Sun 11</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#reservations">Reservations</a>
+      <a href="#transport">Transport</a>
+      <a href="#practical">Practical notes</a>
+      <a href="#links">Official links</a>
+    </div>
+  </nav>
+
+  <main id="main-content" class="container">
+    <section id="overview" class="section-card" aria-labelledby="overview-title">
+      <h2 id="overview-title">At a glance</h2>
+      <div class="table-wrap" role="region" aria-label="Itinerary overview table" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Date</th><th scope="col">Main area</th><th scope="col">Highlights</th><th scope="col" class="num">Approximate walking</th></tr></thead>
+          <tbody>
+            <tr><td>Tue 6 Oct</td><td>Eixample</td><td>16:05 arrival, hotel check-in, neighborhood dinner</td><td class="num">1–2 km</td></tr>
+            <tr><td>Wed 7 Oct</td><td>Sagrada Família &amp; Eixample</td><td>Sagrada Família, Sant Pau, Casa Batlló</td><td class="num">5–7 km</td></tr>
+            <tr><td>Thu 8 Oct</td><td>Old City</td><td>Palau de la Música, Gothic Quarter, El Born</td><td class="num">6–8 km</td></tr>
+            <tr><td>Fri 9 Oct</td><td>Park Güell &amp; Gràcia</td><td>Park Güell, Casa Vicens, Gràcia</td><td class="num">5–7 km</td></tr>
+            <tr><td>Sat 10 Oct</td><td>Montjuïc &amp; waterfront</td><td>Cable car/views, museum, Barceloneta</td><td class="num">5–7 km</td></tr>
+            <tr><td>Sun 11 Oct</td><td>Departure</td><td>Breakfast, checkout, airport transfer, CX318</td><td class="num">Minimal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Walking estimates include time inside sights. Taxis can reduce every day to roughly 3–5 km.</p>
+    </section>
+
+    <article id="tuesday" class="day-card" data-day="Tuesday 6 October" aria-labelledby="tuesday-title">
+      <h2 id="tuesday-title">Tuesday, 6 October — Arrival and an easy Eixample evening</h2>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Casa_Batll%C3%B3_01.jpg/1280px-Casa_Batll%C3%B3_01.jpg" alt="Casa Batlló façade and rooftop details in Eixample" loading="eager" fetchpriority="high" referrerpolicy="no-referrer">
+        <figcaption>Casa Batlló — photo by <a href="https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3_01.jpg" target="_blank" rel="noopener noreferrer">Bernard Gagnon</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</figcaption>
+      </figure>
+      <p class="section-intro">Your flight arrives late enough that this should remain a recovery evening, with no ticketed sightseeing.</p>
+      <ul class="timeline">
+        <li><strong>16:05:</strong> Scheduled arrival of <strong>easyJet U2 2001</strong> at Barcelona–El Prat Airport. The time is local Barcelona time. Check the easyJet app shortly before travel for the confirmed terminal; easyJet commonly uses Terminal 2, but terminal assignments can change.</li>
+        <li><strong>16:05–17:15:</strong> Allow approximately 45–70 minutes to disembark, complete any required entry formalities, and collect luggage.</li>
+        <li><strong>17:15–18:00:</strong> Take a licensed taxi from the official rank to Mihlton Barcelona Boutique B&amp;B. The drive is usually about 30–45 minutes but can take longer in rush-hour traffic.</li>
+        <li><strong>Approximately 18:00:</strong> Check in and rest. If the flight or baggage is delayed, go directly to dinner after settling in.</li>
+        <li><strong>19:30–20:30:</strong> Have dinner near the hotel. Convenient areas include Carrer d’Enric Granados, Rambla de Catalunya, and the streets around Provença and Mallorca.</li>
+        <li><strong>After dinner, optional:</strong> Take a gentle 15–30 minute stroll along Rambla de Catalunya or see the illuminated exterior of <strong>La Pedrera</strong>, which is only a few minutes from the B&amp;B. Your departure schedule leaves no sightseeing time on Sunday, so do this tonight only if you still feel comfortable.</li>
+      </ul>
+      <p><strong>Easy dinner ideas:</strong> Bodega Joan for Catalan comfort food, La Pepita for lively tapas, or a restaurant along Enric Granados. Check current Tuesday hours and reserve if possible.</p>
+      <aside class="alternative warning"><p><strong>If the flight is delayed:</strong> Skip the walk. Check in, eat close to the B&amp;B, and start sightseeing fresh on Wednesday morning.</p></aside>
+    </article>
+
+    <article id="wednesday" class="day-card" data-day="Wednesday 7 October" aria-labelledby="wednesday-title">
+      <h2 id="wednesday-title">Wednesday, 7 October — Gaudí and Modernisme</h2>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Sagrada_Familia_March_2015-10a.jpg/1280px-Sagrada_Familia_March_2015-10a.jpg" alt="Colorful ceiling and columns inside Sagrada Família" loading="lazy" referrerpolicy="no-referrer">
+        <figcaption>Sagrada Família interior — photo by <a href="https://commons.wikimedia.org/wiki/File:Sagrada_Familia_March_2015-10a.jpg" target="_blank" rel="noopener noreferrer">Alvesgaspar</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</figcaption>
+      </figure>
+      <h3>Morning</h3>
+      <ul class="timeline">
+        <li><strong>08:45:</strong> Leave the hotel. Take metro <strong>L5 from Diagonal to Sagrada Família</strong>; allow about 25 minutes door to door.</li>
+        <li><strong>09:30–11:15: Sagrada Família.</strong> Book a timed entry and arrive about 15 minutes early. The official October schedule currently lists Monday–Friday opening from 09:00 to 19:00, but the basilica notes that schedules can change for special events. See the <a href="https://sagradafamilia.org/en/schedules-how-to-get/" target="_blank" rel="noopener noreferrer">official schedule</a> and buy only through the <a href="https://sagradafamilia.org/en/tickets-individuals" target="_blank" rel="noopener noreferrer">official ticket page</a>.</li>
+        <li>A tower is optional. Skip it if either of you dislikes heights, enclosed spaces, or narrow stairs; the basilica interior and museum already make a complete visit.</li>
+        <li><strong>11:15:</strong> Walk along the pedestrian-friendly Avinguda de Gaudí.</li>
+        <li><strong>11:45–13:00: Recinte Modernista de Sant Pau.</strong> This colorful Art Nouveau complex complements Sagrada Família and is usually calmer.</li>
+      </ul>
+      <h3>Afternoon and evening</h3>
+      <ul class="timeline">
+        <li><strong>13:15–14:30:</strong> Lunch along Avinguda de Gaudí or near Sant Pau.</li>
+        <li><strong>14:30–16:30:</strong> Return to the B&amp;B by L5 and rest.</li>
+        <li><strong>17:00–18:30: Casa Batlló.</strong> It is about a 15-minute walk from the B&amp;B. The standard visit takes approximately 75 minutes. The <a href="https://www.casabatllo.es/en/" target="_blank" rel="noopener noreferrer">official Casa Batlló site</a> lists timed visits and current experiences.</li>
+        <li><strong>19:00:</strong> Easy stroll back along Passeig de Gràcia.</li>
+        <li><strong>20:00:</strong> Dinner in Eixample.</li>
+      </ul>
+      <aside class="alternative"><p><strong>Lower-energy version:</strong> Visit Sagrada Família, have lunch, and return to the hotel. Keep Casa Batlló; omit Sant Pau.</p></aside>
+    </article>
+
+    <article id="thursday" class="day-card" data-day="Thursday 8 October" aria-labelledby="thursday-title">
+      <h2 id="thursday-title">Thursday, 8 October — Palau de la Música, Gothic Quarter and El Born</h2>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Barcelona_Gothic_Quarter_%2853593807263%29.jpg/1280px-Barcelona_Gothic_Quarter_%2853593807263%29.jpg" alt="Narrow historic street beside Barcelona Cathedral in the Gothic Quarter" loading="lazy" referrerpolicy="no-referrer">
+        <figcaption>Barcelona Gothic Quarter — photo by <a href="https://commons.wikimedia.org/wiki/File:Barcelona_Gothic_Quarter_(53593807263).jpg" target="_blank" rel="noopener noreferrer">Nan Palmero</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.</figcaption>
+      </figure>
+      <aside class="notice"><p>Wear shoes with good grip: the Old City has cobbles and uneven paving.</p></aside>
+      <h3>Morning</h3>
+      <ul class="timeline">
+        <li><strong>08:50:</strong> Take L3 from Diagonal to Catalunya, then walk to the Palau.</li>
+        <li><strong>09:30–10:25: Palau de la Música Catalana.</strong> Choose a guided or audio-guided architectural visit. Check the <a href="https://www.palaumusica.cat/en" target="_blank" rel="noopener noreferrer">official Palau calendar</a> before booking; if an appealing concert is offered during your stay, consider returning one evening instead.</li>
+        <li><strong>10:30–12:30: Gothic Quarter walk:</strong>
+          <ol>
+            <li>Plaça Nova and the Roman wall</li>
+            <li>Barcelona Cathedral and cloister</li>
+            <li>Carrer del Bisbe</li>
+            <li>Plaça Sant Jaume</li>
+            <li>Temple of Augustus columns</li>
+            <li>Plaça del Rei</li>
+          </ol>
+        </li>
+      </ul>
+      <p>Do not rush to cover every lane; the pleasure is in the architecture and small squares.</p>
+      <h3>Afternoon and evening</h3>
+      <ul class="timeline">
+        <li><strong>12:45–14:15:</strong> Lunch in the Gothic Quarter or El Born.</li>
+        <li><strong>14:15–16:30: El Born:</strong> Visit <strong>Santa Maria del Mar</strong>, then choose one of:
+          <ul>
+            <li><strong>Picasso Museum</strong> — best for art lovers; reserve a timed ticket.</li>
+            <li><strong>El Born Centre de Cultura i Memòria</strong> plus a slower neighborhood stroll — less tiring.</li>
+          </ul>
+        </li>
+        <li><strong>16:30:</strong> Coffee, then walk through Parc de la Ciutadella or continue to Port Vell if you still have energy.</li>
+        <li><strong>17:30–18:00:</strong> Taxi back to the B&amp;B for a rest.</li>
+        <li><strong>20:00:</strong> Dinner near the hotel, or return to El Born only if you have a concert reservation.</li>
+      </ul>
+      <p><strong>Food ideas in El Born:</strong> Bar del Pla, Tapeo, or Cal Pep. These can be busy, so reserve where accepted or arrive early.</p>
+      <aside class="alternative warning"><p><strong>Rain option:</strong> Extend the Palau visit, visit the Picasso Museum, and use taxis between the hotel and Old City.</p></aside>
+    </article>
+
+    <article id="friday" class="day-card" data-day="Friday 9 October" aria-labelledby="friday-title">
+      <h2 id="friday-title">Friday, 9 October — Park Güell and Gràcia</h2>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Park_G%C3%BCell_02.jpg/1280px-Park_G%C3%BCell_02.jpg" alt="Gaudí-designed entrance buildings at Park Güell" loading="lazy" referrerpolicy="no-referrer">
+        <figcaption>Park Güell — photo by <a href="https://commons.wikimedia.org/wiki/File:Park_G%C3%BCell_02.jpg" target="_blank" rel="noopener noreferrer">Bernard Gagnon</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</figcaption>
+      </figure>
+      <h3>Morning</h3>
+      <ul class="timeline">
+        <li><strong>08:50:</strong> Take a taxi from the B&amp;B to the <strong>Carretera del Carmel entrance</strong>. This starts you near the upper side and reduces uphill walking.</li>
+        <li><strong>09:30–11:30: Park Güell.</strong> Reserve the 09:30 entry. Morning is cooler and generally more comfortable. The official site currently lists timed access and warns that capacity is limited; use the <a href="https://parkguell.barcelona/en/planning-your-visit/prices-and-times" target="_blank" rel="noopener noreferrer">official prices and times page</a>. Your ticket is tied to its stated entry window.</li>
+        <li>Follow a mostly downhill route through the panoramic areas, Hypostyle Room, Nature Square, and dragon staircase. Allow two hours with sitting breaks.</li>
+      </ul>
+      <h3>Afternoon and evening</h3>
+      <ul class="timeline">
+        <li><strong>11:45:</strong> Taxi or bus toward Gràcia.</li>
+        <li><strong>12:15–13:15: Casa Vicens</strong> if you want another Gaudí interior. Otherwise, see the exterior and save your energy for the neighborhood.</li>
+        <li><strong>13:30–15:00:</strong> Lunch around Plaça de la Virreina or Mercat de la Llibertat. La Pubilla is a popular lunch option; confirm its current hours.</li>
+        <li><strong>15:00–16:00:</strong> Gentle Gràcia stroll: Plaça de la Virreina, Plaça del Sol, and independent shops.</li>
+        <li><strong>16:00:</strong> Walk or taxi to the B&amp;B; rest.</li>
+        <li><strong>19:30:</strong> Dinner close to the hotel.</li>
+      </ul>
+      <aside class="alternative"><p><strong>Lower-energy version:</strong> Park Güell, taxi to lunch in Gràcia, then return to the B&amp;B. Skip Casa Vicens.</p></aside>
+      <aside class="notice"><p><strong>Important:</strong> Park Güell is hilly even with the easier entrance. A taxi both ways is worthwhile.</p></aside>
+    </article>
+
+    <article id="saturday" class="day-card" data-day="Saturday 10 October" aria-labelledby="saturday-title">
+      <h2 id="saturday-title">Saturday, 10 October — Montjuïc views and the Mediterranean</h2>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_-_Carretera_de_Montju%C3%AFc_-_Panorama_View_of_the_Castle_03.jpg/1280px-Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_-_Carretera_de_Montju%C3%AFc_-_Panorama_View_of_the_Castle_03.jpg" alt="Montjuïc Castle and surrounding greenery" loading="lazy" referrerpolicy="no-referrer">
+        <figcaption>Montjuïc Castle — photo by <a href="https://commons.wikimedia.org/wiki/File:Barcelona_-_Montju%C3%AFc_-_Castell_de_Montju%C3%AFc_1799_-_Carretera_de_Montju%C3%AFc_-_Panorama_View_of_the_Castle_03.jpg" target="_blank" rel="noopener noreferrer">Txllxt TxllxT</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>.</figcaption>
+      </figure>
+      <p class="section-intro">This day combines two areas but includes a substantial hotel break.</p>
+      <h3>Morning: Montjuïc</h3>
+      <ul class="timeline">
+        <li><strong>09:15:</strong> Take L3 from Diagonal to Paral·lel, then the Montjuïc funicular. If the funicular is temporarily closed, TMB normally provides or identifies an alternative; check service notices that morning.</li>
+        <li><strong>10:00:</strong> Take the <strong>Montjuïc cable car</strong> for views and an easy ascent.</li>
+        <li><strong>10:15–11:30:</strong> Montjuïc Castle exterior, gardens, and viewpoints. Tour the interior only if military history interests you.</li>
+        <li><strong>11:30:</strong> Descend by cable car.</li>
+        <li><strong>12:00–13:30:</strong> Choose <strong>one</strong> cultural stop:
+          <ul>
+            <li><strong>Fundació Joan Miró</strong> for modern art, or</li>
+            <li><strong>Museu Nacional d’Art de Catalunya (MNAC)</strong> for Catalan art and the grand palace setting.</li>
+          </ul>
+        </li>
+        <li><strong>13:45:</strong> Lunch in Poble-sec or near Plaça d’Espanya.</li>
+        <li><strong>15:00–17:00:</strong> Return to the B&amp;B and rest.</li>
+      </ul>
+      <h3>Late afternoon: waterfront</h3>
+      <ul class="timeline">
+        <li><strong>17:00:</strong> Taxi to Port Vell or Barceloneta. Stroll the marina and seafront promenade; this is for atmosphere, not beach weather.</li>
+        <li><strong>18:30:</strong> Early seafood or rice dinner. <strong>Can Solé</strong> is a classic option in Barceloneta; reserve and check current hours. Alternatively, eat around Port Vell/El Born for a broader choice.</li>
+        <li><strong>20:30:</strong> Taxi back to the B&amp;B.</li>
+      </ul>
+      <aside class="alternative"><p><strong>Lower-energy version:</strong> Spend the morning on Montjuïc, have lunch, and make the rest of the day free. The waterfront is optional.</p></aside>
+      <aside class="alternative warning"><p><strong>Poor-weather version:</strong> Replace the cable car and waterfront with MNAC plus a relaxed afternoon in Eixample.</p></aside>
+    </article>
+
+    <article id="sunday" class="day-card" data-day="Sunday 11 October" aria-labelledby="sunday-title">
+      <h2 id="sunday-title">Sunday, 11 October — Departure for Hong Kong</h2>
+      <p>Your confirmed arrival is <strong>07:00 HKT on Monday 12 October</strong>. The <a href="https://news.cathaypacific.com/el-vuelo-directo-barcelona-hong-kong-de-cathay-pacific-ya-es-una-realidad" target="_blank" rel="noopener noreferrer">published Cathay Pacific schedule for CX318</a> uses an approximately <strong>13:00 CEST departure from Barcelona on the previous day</strong> for an arrival around 07:00 in Hong Kong. Verify the exact 11 October departure time and terminal on your Cathay Pacific e-ticket or in Manage Booking; if your ticket shows a different time, work backward from it using the same three-hour airport buffer.</p>
+      <ul class="timeline">
+        <li><strong>07:30:</strong> Breakfast at or near the B&amp;B.</li>
+        <li><strong>08:15:</strong> Finish packing and check out. Ask the B&amp;B the previous day to arrange a taxi large enough for you and your luggage.</li>
+        <li><strong>08:45–09:00:</strong> Leave the B&amp;B by taxi for Barcelona–El Prat Airport.</li>
+        <li><strong>Approximately 09:30–09:45:</strong> Arrive at the airport, about three hours before the expected long-haul departure. Go to the terminal shown by Cathay Pacific rather than relying on an older terminal listing.</li>
+        <li><strong>Approximately 13:00 CEST:</strong> Depart Barcelona on <strong>Cathay Pacific CX318</strong> for Hong Kong.</li>
+        <li><strong>Monday 12 October, 07:00 HKT:</strong> Scheduled arrival at Hong Kong International Airport.</li>
+      </ul>
+      <p>Allow 30–45 minutes for the taxi, plus extra time for Sunday traffic or road disruption. There is not enough reliable time for La Pedrera or other ticketed sightseeing this morning.</p>
+      <aside class="notice"><p><strong>Evening-before checklist:</strong> Complete online check-in if available, confirm the terminal and departure time, download boarding passes, organize passports, and settle the hotel bill if the B&amp;B permits advance payment.</p></aside>
+    </article>
+
+    <section id="restaurants" class="section-card" aria-labelledby="restaurants-title">
+      <h2 id="restaurants-title">Restaurant plan: popular local favorites and vegetarian options</h2>
+      <p>The restaurants below fit the itinerary geographically and include both established neighborhood favorites and destination dining. <strong>Vegetarian</strong> here means no meat or seafood; dishes containing egg or dairy are identified where relevant. Menus are seasonal, so reconfirm when reserving—especially at market-driven tapas bars and tasting-menu restaurants.</p>
+      <h3>Popular local restaurants (non-Michelin-starred)</h3>
+      <div class="table-wrap" role="region" aria-label="Popular local restaurants and vegetarian options table" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Best itinerary slot</th><th scope="col">Restaurant</th><th scope="col">Why it is recommended</th><th scope="col">Vegetarian options and suitability</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Tue 6 Oct dinner, Eixample</strong></td><td><a href="https://www.bodegajoan.com/carta/" target="_blank" rel="noopener noreferrer">Bodega Joan</a></td><td>An unpretentious local institution serving Catalan and Spanish comfort food since 1942; a good first-night choice near the B&amp;B.</td><td><strong>Strong choice.</strong> Its published menu lists vegetable-and-Heura paella, padrón peppers, tempura aubergine with molasses, coca bread with tomato, fried eggs with potatoes, goat-cheese or burrata salads, and vegetable/cheese cocas. Ask for the escalivada <strong>without anchovies</strong>.</td></tr>
+            <tr><td><strong>Tue 6 Oct or Wed 7 Oct dinner, Eixample</strong></td><td><a href="https://www.lapepitabcn.com/" target="_blank" rel="noopener noreferrer">La Pepita</a></td><td>A lively, family-run neighborhood tapas bar with classic and reinvented tapas; informal and convenient after sightseeing.</td><td><strong>Possible, but confirm the current menu.</strong> Ask for its meat-free tapas, tomato bread, vegetable plates, and a vegetarian version of any sandwich-style “pepita.” The official site currently does not publish a detailed menu, so mention vegetarian requirements when booking.</td></tr>
+            <tr><td><strong>Thu 8 Oct lunch, El Born</strong></td><td><a href="https://www.bardelpla.cat/en/" target="_blank" rel="noopener noreferrer">Bar del Pla</a></td><td>Relaxed, all-day local gastro-bar using fresh seasonal produce and natural wines; the easiest of the El Born tapas choices for a mixed-diet couple.</td><td><strong>Good with seasonal variation.</strong> The current site highlights mushroom salad with shiso and wasabi; ask for tomato bread and the day’s meat-free vegetable, mushroom, or cheese plates. Confirm whether stocks and sauces are vegetarian.</td></tr>
+            <tr><td><strong>Thu 8 Oct lunch, El Born</strong></td><td><strong>Tapeo</strong></td><td>Popular creative-tapas alternative close to Santa Maria del Mar; reserve or arrive early.</td><td><strong>Moderate choice.</strong> Common meat-free choices include tomato bread, patatas bravas, and aubergine with honey/lime when offered. Its menu changes, so verify each plate and ask whether sauces or stocks contain fish or meat.</td></tr>
+            <tr><td><strong>Thu 8 Oct lunch, El Born</strong></td><td><a href="https://calpep.com/en/" target="_blank" rel="noopener noreferrer">Cal Pep</a></td><td>A famous counter-style market restaurant where the staff choose a sequence of the freshest dishes. Best for travelers happy to eat seafood.</td><td><strong>Weak unless arranged.</strong> Cal Pep publishes no fixed menu and is strongly seafood-led. Tell the server before ordering that a diner is vegetarian and ask for seasonal vegetables, tomato bread, mushrooms, or egg dishes; use Bar del Pla or Rasoterra as the safer backup.</td></tr>
+            <tr><td><strong>Thu 8 Oct lunch or dinner, Gothic Quarter</strong></td><td><a href="https://rasoterra.cat/" target="_blank" rel="noopener noreferrer">Rasoterra</a></td><td><strong>Best new local recommendation for vegetarians:</strong> an independent Slow Food bistro opened in 2013, focused on local produce, biodiversity, and natural wines.</td><td><strong>Excellent—all vegan.</strong> The entire seasonal fixed-price menu is plant-based, built around vegetables, legumes, grains, seaweed, and flowers. Reserve because the menu is served to the whole table.</td></tr>
+            <tr><td><strong>Fri 9 Oct lunch, Gràcia</strong></td><td><a href="https://www.lapubilla.cat/" target="_blank" rel="noopener noreferrer">La Pubilla</a></td><td>A small, popular Catalan neighborhood restaurant beside Mercat de la Llibertat, known for a changing market lunch.</td><td><strong>Limited and menu-dependent.</strong> Ask ahead whether that day’s set menu has both a vegetarian starter and main; do not rely on side dishes alone. If it cannot accommodate, choose a clearly vegetarian café around Gràcia instead.</td></tr>
+            <tr><td><strong>Sat 10 Oct early dinner, Barceloneta</strong></td><td><a href="https://restaurantcansole.com/en/menu/" target="_blank" rel="noopener noreferrer">Can Solé</a></td><td>A historic 1903 Barceloneta rice-and-seafood restaurant and a classic local experience near the waterfront.</td><td><strong>Good if both diners share rice.</strong> Its published menu lists grilled green asparagus, green salad, escalivada, and vegetable rice. Rice requires a minimum of two portions, so confirm that both travelers are happy to order it and that the stock is vegetable-based.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Best non-Michelin balance for this trip:</strong> choose <strong>Bodega Joan</strong> on Tuesday, <strong>Bar del Pla or Rasoterra</strong> on Thursday, <strong>La Pubilla only after confirming that day’s vegetarian main</strong> on Friday, and <strong>Can Solé’s vegetable rice</strong> on Saturday. This gives you traditional Catalan atmosphere as well as one fully plant-based meal.</p>
+      <h3>Michelin restaurants: vegetarian suitability</h3>
+      <div class="table-wrap" role="region" aria-label="Michelin restaurant vegetarian suitability table" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Restaurant</th><th scope="col">Vegetarian position</th><th scope="col">What to request before booking</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://www.restaurantlasarte.com/en/the-menu/" target="_blank" rel="noopener noreferrer">Lasarte</a></td><td><strong>Possible only with advance confirmation.</strong> The current à-la-carte menu includes a carrot, pine-nut and vegetable starter plus vegetarian desserts, but the published tasting and lunch menus contain seafood and meat.</td><td>Ask whether the kitchen can create a complete vegetarian menu for the chosen date. Do not assume the published tasting menu can be adapted after arrival.</td></tr>
+            <tr><td><a href="https://www.montbar.com/en/menu/" target="_blank" rel="noopener noreferrer">Mont Bar</a></td><td><strong>Poor fit without a special arrangement.</strong> Two opening bites are vegetable-based, but the published tasting menu is dominated by shellfish, fish, meat, foie gras, and caviar.</td><td>Contact the restaurant before paying or guaranteeing the booking and obtain explicit confirmation of a full vegetarian sequence.</td></tr>
+            <tr><td><a href="https://cincsentits.com/en/" target="_blank" rel="noopener noreferrer">Cinc Sentits</a></td><td><strong>Unconfirmed.</strong> It serves one seasonally changing Catalan tasting menu, and its public page does not list a vegetarian alternative.</td><td>State the restriction during the reservation inquiry and book only after the restaurant confirms it can provide a complete equivalent menu.</td></tr>
+            <tr><td><a href="https://guide.michelin.com/gb/en/catalunya/barcelona/restaurant/koy-shunka" target="_blank" rel="noopener noreferrer">Koy Shunka</a></td><td><strong>Generally unsuitable for a strict vegetarian unless confirmed.</strong> The experience centers on Japanese technique and Mediterranean seafood.</td><td>Ask specifically about fish stock, dashi, bonito, and shared preparation, not only visible meat or seafood. Rasoterra is the safer Thursday alternative.</td></tr>
+            <tr><td><a href="https://www.disfrutarbarcelona.com/" target="_blank" rel="noopener noreferrer">Disfrutar</a></td><td><strong>Unconfirmed for its fixed tasting experience.</strong> The restaurant publishes Classic and Festival tasting menus but no vegetarian version on its public pages.</td><td>Contact the restaurant before securing the hard-to-get reservation. Confirm that every course—not merely selected snacks—can be adapted.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <aside class="notice" aria-label="Vegetarian booking note"><p><strong>Vegetarian booking note:</strong> Write “one diner is vegetarian: no meat, fish, shellfish, fish stock, bonito, or gelatin” in every reservation. If both diners are vegetarian, say so explicitly. Also disclose allergies separately; “vegetarian” is not an allergy protocol. Restaurant and menu information was checked on <strong>31 August 2026</strong> and has been summarized and rephrased from the linked restaurant pages.</p></aside>
+    </section>
+
+    <section id="michelin" class="section-card" aria-labelledby="michelin-title">
+      <h2 id="michelin-title">Michelin-starred restaurant recommendations</h2>
+      <p>Barcelona's 2026 selection includes several outstanding choices near your B&amp;B. The star counts below were checked against the <a href="https://www.michelin.com/en/publications/products-and-services/the-michelin-guide-spain-andorra-2026" target="_blank" rel="noopener noreferrer">Michelin Guide Spain &amp; Andorra 2026 selection</a> and current Michelin restaurant listings. These restaurants receive strong critical feedback and heavy reservation demand, but cuisine, formality, and meal length differ considerably.</p>
+      <h3>Best matches for this trip</h3>
+      <div class="table-wrap" role="region" aria-label="Michelin-starred restaurant recommendations table" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Restaurant</th><th scope="col" class="num">Stars (2026)</th><th scope="col">Style and why choose it</th><th scope="col">From the B&amp;B</th><th scope="col">Best itinerary slot</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://guide.michelin.com/en/catalunya/barcelona/restaurant/lasarte" target="_blank" rel="noopener noreferrer">Lasarte</a></td><td class="num stars">★★★</td><td>Polished, luxurious tasting menus by chef Paolo Casagrande, drawing on Martín Berasategui's cuisine. Best choice for one grand celebration meal.</td><td>About 5 minutes' walk, inside Monument Hotel</td><td><strong>Wed 7 Oct, 20:00</strong>, after Casa Batlló</td></tr>
+            <tr><td><a href="https://guide.michelin.com/ca/en/catalunya/barcelona/restaurant/mont-bar" target="_blank" rel="noopener noreferrer">Mont Bar</a></td><td class="num stars">★★</td><td>Inventive small plates and tasting-menu cooking in a livelier gastro-bar setting; promoted to two stars in the 2026 guide. Less ceremonial than Lasarte.</td><td>About 12–15 minutes' walk</td><td><strong>Fri 9 Oct, 20:00</strong>, after resting at the B&amp;B</td></tr>
+            <tr><td><a href="https://guide.michelin.com/en/catalunya/barcelona/restaurant/cinc-sentits" target="_blank" rel="noopener noreferrer">Cinc Sentits</a></td><td class="num stars">★★</td><td>Thoughtful modern Catalan tasting menus built around regional ingredients. Quieter and more intimate than Mont Bar.</td><td>About 10 minutes by taxi</td><td><strong>Fri 9 Oct dinner</strong>, as the refined alternative to Mont Bar</td></tr>
+            <tr><td><a href="https://guide.michelin.com/gb/en/catalunya/barcelona/restaurant/koy-shunka" target="_blank" rel="noopener noreferrer">Koy Shunka</a></td><td class="num stars">★</td><td>Japanese technique with Mediterranean seafood and produce. Excellent if you want a change from Catalan tasting menus.</td><td>In the Gothic Quarter; taxi/metro from the B&amp;B</td><td><strong>Thu 8 Oct, about 13:00</strong>, replacing the itinerary's regular lunch</td></tr>
+            <tr><td><a href="https://guide.michelin.com/en/catalunya/barcelona/restaurant/disfrutar" target="_blank" rel="noopener noreferrer">Disfrutar</a></td><td class="num stars">★★★</td><td>Highly theatrical and experimental cooking from former elBulli chefs. The most adventurous option and usually the hardest reservation.</td><td>About 15–20 minutes' walk or a short taxi</td><td><strong>Wed, Thu, or Fri lunch/dinner</strong>, but replace a half-day activity because the experience is long</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>My recommendation</h3>
+      <p>For a vegetarian-inclusive trip, make <strong>Rasoterra on Thursday</strong> your one guaranteed destination meal and use <strong>Bodega Joan</strong> and <strong>Can Solé</strong> for traditional local cooking with published vegetarian choices. Treat every Michelin reservation as conditional: contact the restaurant first and reserve only after it confirms a complete vegetarian experience.</p>
+      <ul>
+        <li>If <strong>Lasarte confirms</strong> a full vegetarian menu, Wednesday is the most convenient slot and provides the grandest formal meal.</li>
+        <li>Choose <strong>Cinc Sentits or Mont Bar on Friday only after written confirmation</strong> that the kitchen can serve an equivalent vegetarian tasting sequence; their standard published menus are not dependable vegetarian choices.</li>
+        <li>Choose <strong>Koy Shunka only for non-vegetarian diners</strong> unless the restaurant explicitly confirms a complete menu without seafood, fish stock, dashi, or bonito.</li>
+        <li>Treat <strong>Disfrutar as a reservation-led itinerary change</strong> and verify vegetarian accommodation before securing the booking. If it cannot accommodate, do not reorganize the sightseeing day around it.</li>
+      </ul>
+      <h3>Booking advice</h3>
+      <ul>
+        <li>Reserve as soon as each restaurant releases October dates. Disfrutar may already be difficult; use its official waitlist rather than an unofficial reseller.</li>
+        <li>The <a href="https://www.restaurantlasarte.com/en/reserve" target="_blank" rel="noopener noreferrer">Lasarte reservation page</a> currently says it is closed Sunday, Monday, and Tuesday, making Wednesday 7 October your first possible evening. It requires a card guarantee and advance notice for changes or cancellations.</li>
+        <li>Expect tasting meals to last approximately <strong>2.5–4 hours</strong>. For a late seating, be prepared to simplify or start the next morning more slowly if needed.</li>
+        <li>State allergies, intolerances, mobility needs, and foods you do not eat <strong>when booking</strong>, not after arrival. Complex tasting menus may not accommodate every restriction without notice.</li>
+        <li>Smart casual clothing is the safe choice; Lasarte is the dressiest of this shortlist. Comfortable but polished shoes are suitable.</li>
+        <li>Menus and prices change seasonally. Review the official booking page before confirming, including wine-pairing costs and cancellation terms.</li>
+      </ul>
+      <aside class="notice" aria-label="Restaurant priority order"><p><strong>Priority order for this vegetarian-inclusive trip:</strong> Rasoterra → Bodega Joan → Can Solé → any Michelin restaurant that explicitly confirms a full vegetarian menu.</p></aside>
+    </section>
+
+    <section id="reservations" class="section-card" aria-labelledby="reservations-title">
+      <h2 id="reservations-title">Reservations to make</h2>
+      <p>Book through official sites where possible. Recommended priority:</p>
+      <ol>
+        <li><strong>Sagrada Família:</strong> Wednesday 7 October at <strong>09:30</strong>.</li>
+        <li><strong>Park Güell:</strong> Friday 9 October at <strong>09:30</strong>. Official entry capacity is limited, so advance booking matters (<a href="https://parkguell.barcelona/en/planning-your-visit/faqs" target="_blank" rel="noopener noreferrer">Park Güell FAQ</a>).</li>
+        <li><strong>Casa Batlló:</strong> Wednesday 7 October at <strong>17:00</strong>.</li>
+        <li><strong>Palau de la Música architectural visit:</strong> Thursday 8 October around <strong>09:30</strong>.</li>
+        <li><strong>Picasso Museum:</strong> Thursday 8 October around <strong>14:30</strong>, only if you do <strong>not</strong> reserve the long Koy Shunka lunch.</li>
+        <li><strong>Sant Pau, Casa Vicens, and Joan Miró/MNAC:</strong> book after the core three are confirmed.</li>
+        <li>Reserve dinner only for restaurants you strongly prefer; Barcelona dining is usually later than in North America or northern Europe.</li>
+      </ol>
+      <p>Save ticket PDFs or screenshots offline. Bring the identification used for named tickets; Sagrada Família’s rules state that tickets are personal and identification may be requested.</p>
+    </section>
+
+    <section id="transport" class="section-card" aria-labelledby="transport-title">
+      <h2 id="transport-title">Getting around</h2>
+      <h3>From the airport</h3>
+      <ul>
+        <li><strong>Simplest:</strong> A licensed taxi directly to the B&amp;B, particularly with luggage.</li>
+        <li><strong>Lower-cost compromise:</strong> Aerobús to Plaça Universitat or Plaça Catalunya, then a short taxi to the B&amp;B.</li>
+        <li>The airport metro is reliable but requires transfers and is less convenient with luggage for this address.</li>
+      </ul>
+      <h3>Within Barcelona</h3>
+      <ul>
+        <li>Your nearest useful station is <strong>Diagonal (L3/L5)</strong>; <strong>Provença FGC</strong> is also nearby.</li>
+        <li>Use metro for Sagrada Família, the Old City, and Montjuïc. Use taxis for Park Güell and when tired.</li>
+        <li>For this walk-heavy itinerary, compare separate multi-journey cards with the unlimited <strong>Hola Barcelona Travel Card</strong>. The latter offers 2–5 consecutive days and includes eligible airport metro travel. Not every ordinary fare is valid at airport L9 stations; check the <a href="https://www.tmb.cat/en/visit-barcelona/public-transport/metro-airport/" target="_blank" rel="noopener noreferrer">official TMB airport guidance</a> and <a href="https://www.tmb.cat/en/barcelona-fares-metro-bus/transport-ticket-fares" target="_blank" rel="noopener noreferrer">2026 fares</a> before purchase.</li>
+        <li>Each traveler should have the appropriate individual ticket or pass.</li>
+      </ul>
+    </section>
+
+    <section id="practical" class="section-card" aria-labelledby="practical-title">
+      <h2 id="practical-title">Comfort and practical notes</h2>
+      <ul>
+        <li><strong>October conditions:</strong> Usually pleasant for walking, but rain and temperature swings are possible. Pack layers, a compact umbrella, and supportive shoes.</li>
+        <li><strong>Meal rhythm:</strong> Lunch around 13:30–15:00 and dinner around 20:00 fits local schedules while avoiding the latest dining hours.</li>
+        <li><strong>Rest:</strong> Wednesday and Saturday include intentional hotel breaks. Keep them; they will make the evenings more enjoyable.</li>
+        <li><strong>Terrain:</strong> Park Güell and Montjuïc are the steepest days. Use taxis, funiculars, and cable cars rather than treating transport as wasted sightseeing time.</li>
+        <li><strong>Safety:</strong> Barcelona is generally easy to navigate, but pickpocketing is common in crowded transport and tourist areas. Use a zipped cross-body bag, keep phones away from table edges, and ignore unsolicited “help” at ticket machines.</li>
+        <li><strong>Water:</strong> Carry a small bottle and refill it. Sit for coffee whenever you need a break.</li>
+        <li><strong>Sunday:</strong> Keep Sunday morning exclusively for checkout and the airport transfer; do not add a ticketed attraction.</li>
+      </ul>
+    </section>
+
+    <section id="day-trip" class="section-card" aria-labelledby="day-trip-title">
+      <h2 id="day-trip-title">Optional day-trip swap</h2>
+      <p>If both of you strongly prefer mountain scenery and monasteries, replace <strong>Saturday’s Montjuïc/waterfront day</strong> with Montserrat. It requires a longer transit day, more planning, and some sloping terrain, so the main itinerary keeps all five sightseeing days in Barcelona. Do not sacrifice Sagrada Família, Park Güell, or the Old City for it on a first visit.</p>
+    </section>
+
+    <section id="links" class="section-card" aria-labelledby="links-title">
+      <h2 id="links-title">Key official links</h2>
+      <ul class="link-grid">
+        <li><a href="https://sagradafamilia.org/en/tickets-individuals" target="_blank" rel="noopener noreferrer">Sagrada Família tickets</a></li>
+        <li><a href="https://sagradafamilia.org/en/schedules-how-to-get/" target="_blank" rel="noopener noreferrer">Sagrada Família opening schedule</a></li>
+        <li><a href="https://parkguell.barcelona/en" target="_blank" rel="noopener noreferrer">Park Güell official site</a></li>
+        <li><a href="https://www.casabatllo.es/en/" target="_blank" rel="noopener noreferrer">Casa Batlló official site</a></li>
+        <li><a href="https://www.palaumusica.cat/en" target="_blank" rel="noopener noreferrer">Palau de la Música Catalana</a></li>
+        <li><a href="https://www.tmb.cat/en/visit-barcelona" target="_blank" rel="noopener noreferrer">Barcelona public transport visitor information</a></li>
+      </ul>
+      <p class="closing-note"><em>Schedule and access information was checked on 24 August 2026. Opening hours, transit operations, exhibitions, restaurant hours, and ticket availability can change; reconfirm timed plans shortly before travel. Information from linked sources has been summarized and rephrased for compliance with licensing restrictions.</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container"><p>Barcelona · 6–11 October 2026</p></div>
+  </footer>
+</body>
+</html>
